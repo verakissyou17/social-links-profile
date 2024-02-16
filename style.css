@@ -1,4 +1,6 @@
-*, *::after, *::before {
+*, 
+*::after, 
+*::before {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -17,28 +19,50 @@ body {
   font-family: 'Inter', sans-serif;
   background-color: var(--Off-Black);
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Dark-Grey);
+  color: var(--White);
+  padding: 1.5em;
+  border-radius: 15px;
 }
 
 p {
-  font-size: 14px;
+  font-size: 0.8750rem;
   font-family: 'Inter', sans-serif;
-  margin-bottom: 2em;
+  margin-bottom: 1.5em;
 }
 
 img {
   border-radius: 50%;
+  max-width: 100%;
+  display: block;
 }
 
 h1 {
   font-family: 'Inter', sans-serif;
+  font-size: clamp(1rem, 3.5vw, 1.5rem);
   margin-top: .7em;
   margin-bottom: .25em;
 }
 
 h3 {
   font-family: 'Inter', sans-serif;
+  font-size: clamp(.5rem, 2.5vw, 1.2rem);
   color: var(--Green);
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 
 button {
@@ -47,9 +71,10 @@ button {
   background-color: var(--Grey);
   color: var(--White);
   padding: 1em;
-  margin-bottom: 1em;
+  margin-bottom: .5em;
   border-radius: 10px;
   font-family: 'Inter', sans-serif;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -60,20 +85,6 @@ button:hover {
 
 main :nth-child(9) {
   margin-bottom: 0;
-}
-
-.container {
-  width: 100%;
-  max-width: 370px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto;
-  background-color: var(--Dark-Grey);
-  color: var(--White);
-  padding: 2em;
-  border-radius: 15px;
 }
 
   footer {
@@ -89,10 +100,4 @@ main :nth-child(9) {
 
   footer a:hover {
     color: var(--Grey);
-  }
-
-  @media (min-width: 500px) {
-    .container {
-      margin-top: 10em;
-    }
   }
